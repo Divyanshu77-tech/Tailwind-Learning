@@ -1,8 +1,9 @@
 import React from 'react'
+import LearFlex from './LearFlex'
 
 const App = () => {
   return (
-    <div className="text-2xl font-bold text-blue-600">Hello Tailwind 🚀</div>
+    <LearFlex />
   )
 }
 
