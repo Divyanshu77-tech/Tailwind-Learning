@@ -1,6 +1,6 @@
 import React from "react";
 
-const LearFlex = () => {
+const LearnFlex = () => {
   // 🌀 Flex Direction
   // flex-row (default): children left → right
   // flex-row-reverse: right → left
@@ -65,4 +65,4 @@ const LearFlex = () => {
   );
 };
 
-export default LearFlex;
+export default LearnFlex;
