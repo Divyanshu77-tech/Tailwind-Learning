@@ -20,7 +20,7 @@ const VerifyEmailCode = () => {
       otpContainer.current.children[index - 1].focus()
     }
   }
-  console.log(dirty);
+
   return (
     <div className="h-screen w-screen bg-[#002A5A] text-white flex flex-col items-center justify-center">
       <h1 className="text-4xl">

@@ -7,11 +7,11 @@ import LearnGrid from './components/Learn/LearnGrid'
 import VerifyEmail from './components/projects/VerifyEmail'
 import VerifyAge from './components/projects/VerifyAge'
 import VerifyEmailCode from './components/projects/VerifyEmailCode/VerifyEmailCode'
-
+import Profile from './components/projects/Profile/Profile'
 
 const App = () => {
   return (
-    <VerifyEmailCode />
+    <Profile />
   )
 }
 
