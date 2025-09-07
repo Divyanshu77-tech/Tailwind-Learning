@@ -1,14 +1,12 @@
 import React from 'react'
-import SideBar from './SideBar'
-import Main from './Main/Main'
+import SideBar from './SideBar/SideBar'
 
 const Profile = () => {
   return (
-    <div className="h-screen w-screen flex">
+    <div className='h-screen w-screen'>
       <SideBar />
-      <Main />
     </div>
-  )
+  );
 }
 
 export default Profile
