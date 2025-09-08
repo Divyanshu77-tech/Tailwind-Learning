@@ -9,7 +9,7 @@ import VerifyAge from './components/projects/VerifyAge'
 import VerifyEmailCode from './components/projects/VerifyEmailCode/VerifyEmailCode'
 import Profile from './components/projects/Profile/Profile'
 
-import MyComponent from './components/projects/Profile/SideBar/TEST'
+
 
 const App = () => {
   return (

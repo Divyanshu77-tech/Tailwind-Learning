@@ -5,10 +5,11 @@ import SideBarHead from "./SideBarHead";
 const SideBarMain = ({ menuDiv, open }) => {
   return (
     <div
+      
       ref={menuDiv}
-      className={`absolute top-0 left-0  z-10 w-[45%] sm:w-[40%] md:w-[35%] lg:w-[25%] xl:w-[20%] h-full border-r-2 border-gray-300 bg-white pt-4 px-2 transition-all duration-300 ${
-        open ? "-translate-x-0" : "-translate-x-[100%]"
-      }`}
+      className={`animate-bar z-20 h-full border-r-2 border-gray-300 bg-white pt-4 px-2 w-[55%] sm:w-[40%] md:w-[35%] lg:w-[25%] xl:w-[18%]  transition-transform duration-300  ${
+        open ? "-translate-x-0" : "-translate-x-[130%]"
+      } lg:-translate-x-0`}
     >
       {/* Side bar header profile pic and company logo */}
       <SideBarHead />

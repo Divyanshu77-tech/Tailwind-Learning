@@ -1,5 +1,6 @@
-import React from 'react'
+
 import SideBar from './SideBar/SideBar'
+import ProfileMain from './Main/ProfileMain';
 
 const Profile = () => {
   return (

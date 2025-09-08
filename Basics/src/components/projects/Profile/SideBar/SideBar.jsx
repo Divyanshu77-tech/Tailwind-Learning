@@ -13,10 +13,8 @@ const SideBar = () => {
   useEffect(() => {
     function handleOutsideClick(e) {
       if (menuDiv.current && !menuDiv.current.contains(e.target)) {
-        setOpen((prev) => {
-          if (prev);
-          return false;
-        });
+        if (!open) return;
+        setOpen(false);
       }
     }
     document.addEventListener("mousedown", handleOutsideClick);
@@ -25,9 +23,9 @@ const SideBar = () => {
     };
   }, [open]);
   return (
-    <div className="relative h-full flex">
+    <div className="h-full flex">
+      <SideBarTglBtn handleClick={handleClick} open={open} />
       <SideBarMain menuDiv={menuDiv} open={open} />
-      <SideBarTglBtn handleClick={handleClick} />
     </div>
   );
 };
