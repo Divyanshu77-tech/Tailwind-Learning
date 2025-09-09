@@ -1,6 +1,6 @@
 import React from "react";
 
-const SideBarHead = () => {
+const NavPanelHead = () => {
   return (
     <div className="flex justify-between">
       <div className="bg-[#002B5B]  text-[1rem] w-36 py-2 text-center rounded-lg">
@@ -19,4 +19,4 @@ const SideBarHead = () => {
   );
 };
 
-export default SideBarHead;
+export default NavPanelHead;

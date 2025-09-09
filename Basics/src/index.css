@@ -1,1 +1,9 @@
 @import "tailwindcss";
+@theme {
+  --breakpoint-xs: 320px; /* Extra small devices */
+  --breakpoint-sm: 576px; /* Small devices */
+  --breakpoint-md: 768px; /* Medium devices (tablets) */
+  --breakpoint-lg: 992px; /* Large devices (desktops) */
+  --breakpoint-xl: 1200px; /* Extra large devices */
+  --breakpoint-2xl: 1400px; /* Extra extra large devices */
+}

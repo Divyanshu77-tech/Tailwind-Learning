@@ -1,32 +1,23 @@
-import React, { useEffect, useRef, useState } from "react";
-import NavButton from "./NavButton";
-import SideBarHead from "./SideBarHead";
-import SideBarTglBtn from "./SideBarTglBtn";
-import SideBarMain from "./SideBarMain";
+import React, { useState } from "react";
+import MobileMenuBtn from "./MobileMenuBtn";
+import NavPanel from "./NavPanel";
 
 const SideBar = () => {
-  const [open, setOpen] = useState(false);
-  const menuDiv = useRef(null);
-  function handleClick() {
-    setOpen(!open);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  function openMenu() {
+    setIsMenuOpen(prev => !prev);
   }
-  useEffect(() => {
-    function handleOutsideClick(e) {
-      if (menuDiv.current && !menuDiv.current.contains(e.target)) {
-        if (!open) return;
-        setOpen(false);
-      }
-    }
-    document.addEventListener("mousedown", handleOutsideClick);
-    return () => {
-      document.removeEventListener("mousedown", handleOutsideClick);
-    };
-  }, [open]);
+  function closeMenu() {
+    setIsMenuOpen(prev => !prev);
+  }
   return (
-    <div className="h-full flex">
-      <SideBarTglBtn handleClick={handleClick} open={open} />
-      <SideBarMain menuDiv={menuDiv} open={open} />
+    <>
+    <div className="h-full">
+      <MobileMenuBtn openMenu={openMenu} />
+      <NavPanel isMenuOpen={isMenuOpen} />
     </div>
+    {isMenuOpen && <div onClick={closeMenu} className="fixed inset-0 bg-black opacity-15 lg:hidden"></div>}
+    </>
   );
 };
 
