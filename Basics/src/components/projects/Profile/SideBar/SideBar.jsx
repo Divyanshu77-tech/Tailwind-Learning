@@ -12,7 +12,7 @@ const SideBar = () => {
   }
   return (
     <>
-    <div className="h-full">
+    <div className="">
       <MobileMenuBtn openMenu={openMenu} />
       <NavPanel isMenuOpen={isMenuOpen} />
     </div>
