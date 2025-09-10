@@ -1,14 +1,13 @@
-
-import SideBar from './SideBar/SideBar'
-import ProfileMain from './Main/ProfileMain';
+import ProfileMain from "./Main/ProfileMain";
+import SideBar from "./SideBar/SideBar";
 
 const Profile = () => {
   return (
-    <div className='h-full w-screen flex'>
+    <div className="h-screen w-screen flex overflow-y-auto">
       <SideBar />
       <ProfileMain />
     </div>
   );
-}
+};
 
-export default Profile
+export default Profile;

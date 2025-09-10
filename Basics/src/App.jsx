@@ -12,9 +12,7 @@ import Profile from './components/projects/Profile/Profile'
 
 
 const App = () => {
-  return (
-    <Profile />
-  )
+  return <Profile />;
 }
 
 export default App

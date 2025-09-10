@@ -1,23 +1,24 @@
 import React, { useState } from "react";
-import MobileMenuBtn from "./MobileMenuBtn";
+import SideBarMobileToggle from "./SideBarMobileToggle";
 import NavPanel from "./NavPanel";
 
 const SideBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  function openMenu() {
-    setIsMenuOpen(prev => !prev);
-  }
-  function closeMenu() {
-    setIsMenuOpen(prev => !prev);
+  function toggleMenu() {
+    setIsMenuOpen(!isMenuOpen);
   }
   return (
-    <>
-    <div className="">
-      <MobileMenuBtn openMenu={openMenu} />
+    <div className="h-full">
+        <SideBarMobileToggle isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
+
       <NavPanel isMenuOpen={isMenuOpen} />
+      {isMenuOpen ? (
+        <div
+          onClick={toggleMenu}
+          className="fixed inset-0 bg-black opacity-15 z-0 lg:hidden"
+        ></div>
+      ) : null}
     </div>
-    {isMenuOpen && <div onClick={closeMenu} className="fixed inset-0 bg-black opacity-15 lg:hidden"></div>}
-    </>
   );
 };
 
